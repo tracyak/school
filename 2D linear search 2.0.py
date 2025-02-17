@@ -14,3 +14,5 @@ for j in range (len(my2DArray[0])):
 
 if found == False:
     print("Element not found")
+
+print(j)
