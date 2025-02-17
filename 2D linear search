@@ -1,0 +1,16 @@
+
+
+my2DArray = [[12,6,2,27],[26,18,7,21],[12,31,46,50]]
+
+
+num = int(input("Type the integer you are searching for:"))
+found = False
+
+for i in range(len(my2DArray)):
+   for j in range (len(my2DArray[0])):                
+       if num == my2DArray[i][j]:
+           print("Element found, row", i,"column", j)
+           found = True
+
+if found == False:
+    print("Element not found")

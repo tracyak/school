@@ -1,0 +1,38 @@
+stackArr = [None for _ in range(10)]
+
+basePointer <- 0 
+topPointer <- -1
+stackFull <- 9
+
+FUNCTION isFull() RETURNS BOOLEAN
+    IF topPointer = stackFull THEN
+        return True
+ENDFUNCTION
+    
+FUNCTION isEmpty() RETURNS BOOLEAN
+    IF topPointer < 0 THEN
+        return True
+ENDFUNCTION
+
+PROCEDURE Pop():
+    global topPointer
+    IF isEmpty() = False THEN
+        temp = stackArr[topPointer]
+        stackArr[topPointer] = None
+        topPointer = topPointer - 1
+        OUTPUT "Element", temp, "has been popped"
+    ELSE
+        OUTPUT "There are no elements in the stack"
+ENDPROCEDURE
+
+PROCEDURE Push(myElement):
+    global topPointer
+    global stackFull
+    IF isFull = False THEN
+        stackArr[topPointer+1] = myElement
+        topPointer = topPointer + 1
+        OUTPUT myElement, "has been pushed"
+    ELSE
+        OUTPUT "Stack is full, no more elements can be pushed"
+ENDPROCEDURE
+

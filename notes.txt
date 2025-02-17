@@ -1,0 +1,29 @@
+Abstract Data Types
+
+- work with pointers
+
+Stacks; LIFO
+- only 1 entry and exit point (at the top of the stack)
+- can push, pop, peek items in a stack
+- two pointers, basePointer (to start of the stack) and topPointer (to the top most item of the stack)
+- when pop, check if there are any items in the stack
+- when push, check if stack is full or not
+- expectations:
+	- initialise a stack using array
+	
+	stackArr = [None for _ in range(10)]
+	basePointer = 0
+	topPointer = -1 #because there are no items on the stack yet
+	stackful = len(myArr) - 1
+
+Queue; FIFO
+- two types of queue, linear and circular
+- 1 entry point (at the end of the queue), 1 exit point (at the start of the queue)
+- keep track of length of queue to ensure we cannot dequeue an empty stack
+- for linear queue, shift all elements to occupy the new free space but this is too expensive and time-consuming
+- hence, we use circular queue, where rear pointer resets to 0 when it goes out of bound but size is not full when enqueueing a new element
+- also where front pointer resets to 0 when it goes out of bound but size is not empty when dequeueing an element
+
+Linked List; data and its pointers
+- when adding an element, it is added to the start of the list
+- when 
