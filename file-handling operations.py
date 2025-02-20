@@ -3,7 +3,7 @@ print(file.read())
 print(file.readline())
 print(file.readlines())
 
-#output file as list VS as it looks in the file
+# #output file as list VS as it looks in the file
 text = file.readlines() #READLINES() CANNOT BE USED IN THE EXAM,YOU MUST USE ALTERNATIVE METHODS DURING EXAM 
 print(text)
 for i in range(len(text)):
