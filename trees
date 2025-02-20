@@ -18,13 +18,16 @@
 # if there is no child/subtree on the root, set left/rightPtr to tempPtr so as to show that this new node is a child of that existing node
 #at the end, set freePtr 
 
-myTree = [[1,9,2],[3,7,-1],[4,13,5],[-1,12,-1],[-1,15,-1],[-1,7,-1],[-1,8,-1],[-1,9,-1],[-1,-1,-1]]
+myTree = [[1,9,2],[3,7,-1],[4,13,5],[-1,5,-1],[-1,12,-1],[-1,15,-1],[-1,7,-1],[-1,8,-1],[-1,9,-1],[-1,-1,-1]]
 rootPtr = 0
 freePtr = 6
+for i in range(10):
+    print(myTree[i])
+
 
 def isEmpty():
-    if freePtr == -1:
-        return True
+    if freePtr != -1:
+        return False
 
 def SearchTree(myElement):
     global rootPtr
@@ -33,12 +36,12 @@ def SearchTree(myElement):
         num = rootPtr
         while num != -1:
             if myElement == myTree[num][1]:
-                location = num
+                return num
             if myElement < myTree[num][1]:
-                num = myTree[0]
+                num = myTree[num][0]
             if myElement > myTree[num][1]:
-                num = myTree[2]
-    return location
+                num = myTree[num][2]
+        return -1
 
-SearchTree(5)
+print(SearchTree(5))
 
