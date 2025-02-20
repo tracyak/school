@@ -27,3 +27,9 @@ Queue; FIFO
 Linked List; data and its pointers
 - when adding an element, it is added to the start of the list
 - when 
+
+Trees; nodes with 3 pointers
+- rootPointer points to the top of the tree(first element added)
+- each node can have 2 child nodes, left child and right child (this is called a subtree)
+- 
+

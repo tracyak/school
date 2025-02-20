@@ -1,0 +1,18 @@
+TYPE Node
+    DECLARE leftPointer : INTEGER
+    DECLARE data : INTEGER
+    DECLARE rightPointer : INTEGER
+ENDTYPE
+DECLARE myTree:ARRAY[0:9] OF Node
+
+rootPointer <- -1
+freePointer <- 0
+
+FOR Index <- 0 TO 9
+    myTree[Index].leftPointer = -1
+    myTree[Index].data = Index + 1
+    myTree[Index].rightPointer = -1
+    IF Index = 9 THEN
+        myTree[Index].dataPointer = -1
+    ENDIF
+NEXT Index
