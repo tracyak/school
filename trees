@@ -26,22 +26,67 @@ for i in range(10):
 
 
 def isEmpty():
-    if freePtr != -1:
-        return False
+    if freePtr == -1 and rootPtr == -1:
+        return True
+    
+def isFull():
+    if freePtr == -1:
+        return True
 
 def SearchTree(myElement):
     global rootPtr
     global freePtr
-    if isEmpty() != True:
-        num = rootPtr
-        while num != -1:
-            if myElement == myTree[num][1]:
-                return num
-            if myElement < myTree[num][1]:
-                num = myTree[num][0]
-            if myElement > myTree[num][1]:
-                num = myTree[num][2]
-        return -1
+    itemPtr = rootPtr
+    while itemPtr != -1:
+            if myElement == myTree[itemPtr][1]:
+                return itemPtr
+            if myElement < myTree[itemPtr][1]:
+                itemPtr = myTree[itemPtr][0]
+            if myElement > myTree[itemPtr][1]:
+                itemPtr = myTree[itemPtr][2]
+    return -1
+        
 
-print(SearchTree(5))
+        
+def InsertTree(myElement):
+    global rootPtr
+    global freePtr
+    if isFull() == True:
+        print("The tree is full, element was not added successfully")
+    elif isEmpty() == True:
+        rootPtr = freePtr
+        freePtr = myTree[freePtr][1]
+        myTree[rootPtr][1] = myElement
+    else:
+        newItemPtr  = freePtr
+        freePtr = myTree[freePtr][1]
+        myTree[newItemPtr][1] = myElement
+        itemPtr = rootPtr
+        while itemPtr != -1: 
+            left = False
+            right = False  
+            if myElement < myTree[itemPtr][1]:
+                left = True
+                tempPtr = itemPtr
+                itemPtr = myTree[itemPtr][0]
+            elif myElement > myTree[itemPtr][1]:
+                right = True
+                tempPtr = itemPtr
+                itemPtr = myTree[itemPtr][2]
+        if left == True:
+            myTree[tempPtr][0] = newItemPtr
+        elif right == True:
+            myTree[tempPtr][2] = newItemPtr
+        
+InsertTree(10)
+print(rootPtr)
+print(freePtr)
+
+            
+
+
+        
+
+
+
 
