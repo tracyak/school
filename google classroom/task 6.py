@@ -19,12 +19,13 @@ def LinearSearch(myIntArray,myInt):
             count += 1 
     return count
 
-#main program question 1(b)(iI),(iii),(d)
-PrintArray(DataArray)
-myNum = int(input("Please input a whole number between 0 and 100 inclusive:"))
-while myNum < 0 and myNum > 100:
-    myNum = int(input("Please input a a valid number:"))
-print("The number", myNum, "is found", LinearSearch(DataArray,myNum),"times.")
+#main program question 1(b)(iI),(iii),(d)(i),(ii)
+if __name__ == "__main__":
+    PrintArray(DataArray)
+    myNum = int(input("Please input a whole number between 0 and 100 inclusive:"))
+    while myNum < 0 or myNum > 100:
+        myNum = int(input("Please input a a valid number:"))
+    print("The number", myNum, "is found", LinearSearch(DataArray,myNum),"times.")
 
 
 
