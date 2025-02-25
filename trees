@@ -21,9 +21,6 @@
 myTree = [[1,9,2],[3,7,-1],[4,13,5],[-1,5,-1],[-1,12,-1],[-1,15,-1],[-1,7,-1],[-1,8,-1],[-1,9,-1],[-1,-1,-1]]
 rootPtr = 0
 freePtr = 6
-for i in range(10):
-    print(myTree[i])
-
 
 def isEmpty():
     if freePtr == -1 and rootPtr == -1:
@@ -62,9 +59,9 @@ def InsertTree(myElement):
         freePtr = myTree[freePtr][1]
         myTree[newItemPtr][1] = myElement
         itemPtr = rootPtr
-        while itemPtr != -1: 
+        while itemPtr != -1:  
             left = False
-            right = False  
+            right = False 
             if myElement < myTree[itemPtr][1]:
                 left = True
                 tempPtr = itemPtr
@@ -77,12 +74,15 @@ def InsertTree(myElement):
             myTree[tempPtr][0] = newItemPtr
         elif right == True:
             myTree[tempPtr][2] = newItemPtr
-        
-InsertTree(10)
-print(rootPtr)
-print(freePtr)
 
-            
+if __name__ == "__main__":       
+    InsertTree(10)
+    for i in range(10):
+        print(myTree[i])
+    print(rootPtr)
+    print(freePtr)
+
+                
 
 
         

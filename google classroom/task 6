@@ -1,0 +1,16 @@
+#question 1(a)(i)
+DataArray = [] #25 data items of type integer
+
+#question 1(a)(ii)
+file = open("/workspaces/school/google classroom/Data.txt",'r')
+for line in file:
+    DataArray.append(int(line.rstrip()))
+
+#question 1(b)(i)
+def PrintArray(DataArray):
+    for i in range(len(DataArray)):
+        print(DataArray[i], end = " ")
+ 
+#question 1(b)(ii),(iii)
+PrintArray(DataArray)
+
