@@ -31,5 +31,15 @@ Linked List; data and its pointers
 Trees; nodes with 3 pointers
 - rootPointer points to the top of the tree(first element added)
 - each node can have 2 child nodes, left child and right child (this is called a subtree)
-- 
+- can be represented by a 2D array
 
+Big O notation:
+- O(1) Constant
+	- The algorithm requires the same number of instructions to be executed, regardless of the size of the input data.
+- O(n) Linear
+	- The time taken for algorithm to be carried out varies proportionally to the size of the input data.
+	- implementing linear time involves the use of iteration(a single count-controlled loop)
+	- e.g. linear search
+- O(n^2) Quadratic(Polynomial)
+	- The time taken for algorithm to be carried out is proportional to the square of the size of the input data.
+	- 
