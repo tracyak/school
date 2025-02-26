@@ -4,7 +4,7 @@
 NameArray = [] #global string, 11 elements
 ScoreArray = [] #global integer, 11 elements
 
-#questoin 1(b)
+#question 1(b)
 def ReadHighScores():
     file = open("/workspaces/school/google classroom/HighScore.txt", 'r')
     i = 0
@@ -15,8 +15,14 @@ def ReadHighScores():
             ScoreArray.append(int(line.rstrip()))
         i +=1
 
+#question 1(c)
+def OutputHighScores():
+    for i in range(10):
+        print(NameArray[i], " ", ScoreArray[i])
 
-ReadHighScores() 
-print(NameArray)
-print(ScoreArray)
+#question 1(d)
+ReadHighScores()
+OutputHighScores()
+
+
 
