@@ -38,8 +38,19 @@ Big O notation:
 	- The algorithm requires the same number of instructions to be executed, regardless of the size of the input data.
 - O(n) Linear
 	- The time taken for algorithm to be carried out varies proportionally to the size of the input data.
-	- implementing linear time involves the use of iteration(a single count-controlled loop)
+	- Implementing linear time involves the use of iteration(a single count-controlled loop)
 	- e.g. linear search
+	- Only the n value is considered for the complexity
 - O(n^2) Quadratic(Polynomial)
-	- The time taken for algorithm to be carried out is proportional to the square of the size of the input data.
-	- 
+	- The time taken for algorithm to be carried out is proportional to the square(or highest power) of the size of the input data.
+	- Implementing polynomial involves use of multiple iterations
+	- e.g bubble sort, insertion sort
+	- Only the n value with the highest power is consider for the complexity
+- O(2^n) Exponential
+	- The time taken for algorithm to be executed is doubled every time size of data input is increased by 1.
+	- Very inefficient
+- O(log n) Logarithmic
+	- The time taken for algorithm to be executed becomes very small as the size of data input increases.
+	- Most efficient 
+	- e.g. binary search
+- Best, Average, and Worst case scenarios
