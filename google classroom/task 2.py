@@ -1,20 +1,22 @@
 #google classroom, task 2
 
 #question 1(a)
-myArray = [[None for _ in range(2)] for _ in range (11)]
+NameArray = [] #global string, 11 elements
+ScoreArray = [] #global integer, 11 elements
 
 #questoin 1(b)
 def ReadHighScores():
-    try:
-        file = open("HighScore.txt", 'r')
-    except FileNotFoundError:
-        print("Sorry, the file you tried to open was not found.")
-    for i in range(len(file)):
-        line = file.readline()
+    file = open("/workspaces/school/google classroom/HighScore.txt", 'r')
+    i = 0
+    for line in file:
         if i%2 == 0:
-            myArray[i][0] = line
+            NameArray.append(str(line.rstrip()))
         else:
-            myArray[i][1] = line
+            ScoreArray.append(int(line.rstrip()))
+        i +=1
+
 
 ReadHighScores() 
-print(myArray)
+print(NameArray)
+print(ScoreArray)
+
