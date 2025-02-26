@@ -23,9 +23,6 @@ def FindValues():
                 numCount = numCount + 1
         return numCount
 
-#Question 1(d)(i),(ii)
-ReadFile()
-print("This number appeared", FindValues(),"times in the array.")
 
 #Question 1(e)
 def BubbleSort():
@@ -43,4 +40,7 @@ def BubbleSort():
                 swap = True
     print(DataArray)
 
+#Question 1(d)(i),(ii)
+ReadFile()
+print("This number appeared", FindValues(),"times in the array.")
 BubbleSort()
