@@ -4,25 +4,25 @@ def factorial(n):
     else:
        return n*factorial(n-1)
 
-myArray = []
+myArray = [1,2,3,4,5,6,7,8,9,10]
 
-def sumArray():
-    sum = 0
-    if len(myArray) == 0:
-        return sum
+def sumArray(myArray):
+    n = len(myArray)
+    if n == 1:
+        return myArray[0]
     else:
-        sum = sum + myArray[]
-        return sum
+        return myArray[0] + sumArray(myArray[1:n])
 
-print(sumArray())
+print(sumArray(myArray))
 
 # reversing a string
 
 def reverseStr(myString):
-   if len(myString) == 1:
-       return myString
+   n = len(myString)
+   newString = myString[n-1]
+   if n == 1:
+        return myString
    else: 
-       newString = myString[len(myString)] + reverseStr(myString)
-       return newString
+        return reverseStr(myString[n-1:1]) + newString
    
 print(reverseStr("tracy"))
