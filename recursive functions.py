@@ -13,7 +13,7 @@ def sumArray():
     else:
         return sum + sumArray()
 
-print(sumArray)
+print(sumArray())
 #reversing a string
 
 # def reverseStr(myString):
