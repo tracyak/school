@@ -46,8 +46,3 @@ def fibonacci(n):
         ans = 0
     elif n == 1:
         ans = 1
-    else: 
-        ans = ans + fibonacci(n-1)
-    return ans
-
-fibonacci(1)

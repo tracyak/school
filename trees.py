@@ -81,7 +81,7 @@ if __name__ == "__main__":
         print(myTree[i])
     print(rootPtr)
     print(freePtr)
-
+print(SearchTree(10))
                 
 
 

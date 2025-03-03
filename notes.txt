@@ -54,3 +54,19 @@ Big O notation:
 	- Most efficient 
 	- e.g. binary search
 - Best, Average, and Worst case scenarios
+- Recursive functios: functions that calls itself during execution
+
+Further Programming:
+- Programming paradigm: set of progamming concepts
+- 4 types of paradigm:
+	- low-level
+	- imperative
+	- object-oriented
+	- declarative
+(1) low-level:
+	- when program needs to have direct access to hardware/specific memory locations
+(2) imperative:
+	- makes use of procedures and functions, lova and global variables
+	- fewer instructions and less data storage
+	- run faster compared to object-oriented than declarative
+	- not suitablt for large projects
