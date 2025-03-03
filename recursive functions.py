@@ -1,10 +1,10 @@
 def factorial(n):
-    if n == 1:
+    if n == 0:
         return 1
     else:
        return n*factorial(n-1)
     
-# print(factorial(5))
+print(factorial(5))
 
 myArray = [1,2,3,4,5,6,7,8,9,10]
 
@@ -30,11 +30,15 @@ def reverseStr(myString):
 
 def letterCount(myString,letter):
     n = len(myString)
-    if letter != myString[n-1]:
+    if n == 0:
         return 0
     else:
-        return 1 + letterCount(myString[:-1],letter)
+        if myString[0] == letter:
+            count = 1
+        else:
+            count = 0
+        return count + letterCount(myString[1:],letter)
     
-print(letterCount("aaa","a"))
-print(letterCount("tracy","y"))
+# print(letterCount("aaa","a"))
+# print(letterCount("tracy","y"))
 
