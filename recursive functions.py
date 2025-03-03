@@ -4,7 +4,7 @@ def factorial(n):
     else:
        return n*factorial(n-1)
     
-print(factorial(5))
+# print(factorial(5))
 
 myArray = [1,2,3,4,5,6,7,8,9,10]
 
@@ -32,13 +32,22 @@ def letterCount(myString,letter):
     n = len(myString)
     if n == 0:
         return 0
+    elif myString[0] == letter:
+        count = 1
     else:
-        if myString[0] == letter:
-            count = 1
-        else:
-            count = 0
-        return count + letterCount(myString[1:],letter)
+        count = 0
+    return count + letterCount(myString[1:],letter)
     
 # print(letterCount("aaa","a"))
 # print(letterCount("tracy","y"))
 
+def fibonacci(n):
+    if n == 0:
+        ans = 0
+    elif n == 1:
+        ans = 1
+    else: 
+        ans = ans + fibonacci(n-1)
+    return ans
+
+fibonacci(1)
