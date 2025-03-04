@@ -70,3 +70,9 @@ Further Programming:
 	- fewer instructions and less data storage
 	- run faster compared to object-oriented than declarative
 	- not suitablt for large projects
+(3) object-oriented:
+	- encapsulation: to combine a properties of an object and all the possible actions into one program
+	- you can define attributes and its methods in a class itself
+	- everytime you call a method on a object, even if it doesn't have any parameters, it is always called with 1 argument
+	- instanciating: to create instances of an object
+	- whenever we create an object of a class, we must include one method called the constructor
