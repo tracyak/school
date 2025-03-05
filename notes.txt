@@ -76,3 +76,8 @@ Further Programming:
 	- everytime you call a method on a object, even if it doesn't have any parameters, it is always called with 1 argument
 	- instanciating: to create instances of an object
 	- whenever we create an object of a class, we must include one method called the constructor
+	- Defining classes using class diagrams
+	Class Diagrams:
+		- Meaningful name
+		- Properties/Attributes (name, data type + description)
+		- Methods, including Constructor (name + parameters and its purpose)
