@@ -69,7 +69,7 @@ Further Programming:
 	- makes use of procedures and functions, lova and global variables
 	- fewer instructions and less data storage
 	- run faster compared to object-oriented than declarative
-	- not suitablt for large projects
+	- not suitable for large projects
 (3) object-oriented:
 	- encapsulation: to combine a properties of an object and all the possible actions into one program
 	- you can define attributes and its methods in a class itself
@@ -79,5 +79,12 @@ Further Programming:
 	- Defining classes using class diagrams
 	Class Diagrams:
 		- Meaningful name
-		- Properties/Attributes (name, data type + description)
+		- Properties/Attributes (name, data type + description) 
 		- Methods, including Constructor (name + parameters and its purpose)
+	- Properties of objects are called 'object variables', it is defined in the constructor
+	- Shared properties of objects in a class are called 'class variables', it is defined outside the constructor
+	- Public & Private variables:
+		- For security reasons, variables can be hidden/made private
+		- Pseudocode: add 'private'(?), Python: add double underscores before the variable name
+		- Accessors/Getters are special methods that allow user to access the private variables
+		- Setters/Mutators are special methods that allow user to change the private variables

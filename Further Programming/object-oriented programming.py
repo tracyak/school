@@ -15,21 +15,48 @@
 # car1.start()
 
 class Person:
+    personCount = 0
     def __init__(self,name,age,gender):
-        self.name = name # of type string
-        self.age = age # of type integer
-        self.gender = gender # of type string of single char
-    def Walk(self):
+        self.__name = name # of type string
+        self.__age = age # of type integer
+        self.__gender = gender # of type string of single char
+        Person.personCount += 1
+
+    def walk(self):
         return f"{self.name} is walking."
-    def Run(self):
+    
+    def run(self):
         return f"{self.name} is running."
-    def Walk(self):
+    
+    def talk(self):
         return f"{self.name} is talking."
+    
+    def getName(self):
+        return self.__name
+    
+    def getAge(self):
+        return self.__age
+    
+    def getGender(self):
+        return self.__gender
+    
+    def setName(self,name):
+        self.__name = name
+    
+    def setAge(self,age):
+        self.__age = age
+    
+    def setGender(self,gender):
+        self.__gender = gender
+
     def PrintPerson(self):
         return f"Name: {self.name}, Age: {self.age}, Gender: {self.gender}"
 
 person1 = Person("Tracy", 17, "F")
-print(person1.name, person1.age, person1.gender)
-print(person1.Walk())
+person2 = Person("Alex", 19, "M")
+person3 = Person("Bob", 18, "M")
 print(person1.PrintPerson())
+print(person2.PrintPerson())
+print(person3.PrintPerson())
 # print(person1.__dict__) # only in python
+
