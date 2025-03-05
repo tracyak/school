@@ -31,5 +31,5 @@ class Person:
 person1 = Person("Tracy", 17, "F")
 print(person1.name, person1.age,person1.gender)
 print(person1.Walk())
-print(person1.PrintPerson()
-print(person1.__dict__) # only in python
+print(person1.PrintPerson())
+# print(person1.__dict__) # only in python
