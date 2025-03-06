@@ -51,12 +51,23 @@ class Person:
 
     def PrintPerson(self):
         return f"Name: {self.name}, Age: {self.age}, Gender: {self.gender}"
+    
+class Teacher(Person):
+    def __init__(self, name, age, gender,salary):
+        super().__init__(name, age, gender)
+        self.__salary = salary
+    
+    def PrintPerson(self):
+        return f"Name: {Person.getName(self)} Age: {Person.getAge(self)}, Gender: {Person.getGender(self)}, Salary: {self.__salary}"
 
 person1 = Person("Tracy", 17, "F")
 person2 = Person("Alex", 19, "M")
 person3 = Person("Bob", 18, "M")
-print(person1.PrintPerson())
-print(person2.PrintPerson())
-print(person3.PrintPerson())
+# print(person1.PrintPerson())
+# print(person2.PrintPerson())
+# print(person3.PrintPerson())
 # print(person1.__dict__) # only in python
+
+teacher1 = Teacher("John,",29,"M",2000)
+print(teacher1.PrintPerson())
 
