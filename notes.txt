@@ -78,22 +78,31 @@ Further Programming:
 	- whenever we create an object of a class, we must include one method called the constructor
 	- Defining classes using class diagrams
 	Class Diagrams:
-		- Meaningful name
-		- Properties/Attributes (name, data type + description) 
-		- Methods, including Constructor (name + parameters and its purpose)
-	- Properties of objects are called 'object variables', it is defined in the constructor
-	- Shared properties of objects in a class are called 'class variables', it is defined outside the constructor
-	- Public & Private variables:
+		- Contents:
+			- Meaningful name
+			- Properties/Attributes (name, data type + description) 
+			- Methods, including Constructor (name + parameters and its purpose)
+		- Properties of objects are called 'object variables', it is defined in the constructor
+		- Shared properties of objects in a class are called 'class variables', it is defined outside the constructor
+	Public & Private variables:
 		- For security reasons, variables can be hidden/made private
 		- Pseudocode: add 'private'(?), Python: add double underscores before the variable name
 		- Accessors/Getters are special methods that allow user to access the private variables
 		- Setters/Mutators are special methods that allow user to change the private variables
 			- These above methods are used anywhere outside of a class, whether in main program or in its sub-class.
-	Inheritance (Relationships between Classes):
+
+	Relationships between Classes:
+	- Inheritance
 		Teacher IS A Person
 		Student IS A Person
-		- 'IS A' is used to define relationships between classes
+		- 'IS A' is used to define hereditary relationships between classes
 		- What do we call classes that are related to one another? Parent-Child classes, Super-Sub classes
 		- Sub classes inherit all properties of its Super class/es along with its own unique properties and methods.
 		- Polymorphism: Sub classes can also re-define methods that are inherited from its Super class.
+	- Containment/Aggregation
+		Building HAS A Room, but Room cannot exist without  Building (Composition)
+		Library HAS A Book, but Book can exist without Library (Containment/Aggregation)
+	
+		
+
 		

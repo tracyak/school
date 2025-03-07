@@ -54,7 +54,7 @@ class Person:
     
 class Teacher(Person):
     def __init__(self, name, age, gender,salary):
-        super().__init__(name, age, gender)
+        super().__init__(name, age, gender) #super().__init__(attribute1,2,3,) is used to show the 'IS A' relationship.
         self.__salary = salary
     
     def PrintPerson(self):

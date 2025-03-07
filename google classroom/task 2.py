@@ -20,16 +20,15 @@ def OutputHighScores():
 #question 1(e)(ii)
 #question 1(e)(ii)
 def Top10List(name,score):
-    insert = False
-    i = 0
-    while insert != True:
-        if int(score) > int(PlayerArray[i][1]):
-            tempName = PlayerArray[i][0]
-            tempScore = PlayerArray[i][1]
-            PlayerArray[i][0] = name
-            PlayerArray[i][1] = score
-            insert = True
-            i += 1
+    for i in range(10):
+        if score > int(PlayerArray[i][1]):
+                for i in range(9,i,-1):
+                    tempName = PlayerArray[i][0]
+                    tempScore = PlayerArray[i][1]
+                    PlayerArray[i][0] = name
+                    PlayerArray[i][1] = str(score)
+                    
+                
 
 #MAIN PROGRAM: question 1(d),(e)(i)
 ReadHighScores()
@@ -42,7 +41,7 @@ score = int(input("Please input an integer score between 1 and 100000 inclusive:
 while score > 100000 or score < 1:
     score = int(input("Please input a valid score:"))
 
-print(PlayerArray)
+
 Top10List(name,score)
-print(PlayerArray)
+
 
