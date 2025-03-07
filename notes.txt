@@ -100,8 +100,8 @@ Further Programming:
 		- Sub classes inherit all properties of its Super class/es along with its own unique properties and methods.
 		- Polymorphism: Sub classes can also re-define methods that are inherited from its Super class.
 	- Containment/Aggregation
-		Building HAS A Room, but Room cannot exist without  Building (Composition)
-		Library HAS A Book, but Book can exist without Library (Containment/Aggregation)
+		Building HAS A Room, but Room cannot exist without Building, Whole-Part relationship (Composition)
+		Library HAS A Book, and either of them can exist without one another, Friendship (Containment/Aggregation)
 	
 		
 
