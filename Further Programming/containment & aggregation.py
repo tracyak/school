@@ -14,8 +14,8 @@ class Library:
 
 
 library1 = ("BBS", "Nicholas")
-book1 = ("Rachel Karen", "Charly", "Horror")
-book2 = ("Lincoln", "Sean Alson", "Romance")
+book1 = Book("Rachel Karen", "Charly", "Horror")
+book2 = Book("Lincoln", "Sean Alson", "Romance")
 Library.storeBook(book1)
 Library.storeBook(book2)
 print(Library.Catalogue)
