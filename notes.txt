@@ -63,13 +63,16 @@ Further Programming:
 	- imperative
 	- object-oriented
 	- declarative
+
 (1) low-level:
 	- when program needs to have direct access to hardware/specific memory locations
+
 (2) imperative:
 	- makes use of procedures and functions, lova and global variables
 	- fewer instructions and less data storage
 	- run faster compared to object-oriented than declarative
 	- not suitable for large projects
+
 (3) object-oriented:
 	- encapsulation: to combine a properties of an object and all the possible actions into one program
 	- you can define attributes and its methods in a class itself
@@ -102,7 +105,63 @@ Further Programming:
 	- Containment/Aggregation
 		Building HAS A Room, but Room cannot exist without Building, Whole-Part relationship (Composition)
 		Library HAS A Book, and either of them can exist without one another, Friendship (Containment/Aggregation)
+
+(4) declarative
+	- similar to trained diagnosis system, where we give the problem in the form of logic statements
+	- expressed as formal logic and computations are deductions from the formal logic statements
+	- languages include SQL, Prolog
+	- 3 basic constructs in Prolog:
+		- facts (data)
+		- rules 
+		- queries (goals)
+
+	Clause Syntax:
+		Head :- Body.
+		- every clause termintates with a full stop (.).
 	
+	Terms:
+		- an atom 
+		- a number
+		- variable
+		- predicate, consisting of an atom and arguments
+
+	capitalCity(paris).
+	capitalCity(berlin).
+	capitalCity(cairo).
+	capitalCity(jakarta).
+	capitalCity(tokyo).
+	capitalCity(hanoi).
+	cityinCountry(paris,france).
+	cityinCountry(berlin,germany).
+	cityinCountry(cairo,egypt).
+	cityinCountry(jakarta,indonesia).
+	cityinCountry(surabaya,indonesia).
+	cityinCountry(tokyo,japan).
+	cityinCountry(hanoi,vietnam).
+
+	vegetable(eggplant).
+	vegetable(potato).
+	vegetable(tomato).
+	meat(chicken).
+	meat(beef).
+	meat(pork).
+	spice(chili).
+	spice(thyme).
+	ingredient(stew,potato,250).
+	ingredient(stew,beef,250).
+	ingredient(steak,beef,250).
+	ingredient(steak,thyme,5).
+
+	parent(fred,jack).
+	parent(fred,alia).
+	parent(fred,paul).
+	parent(dave,fred).
+	grandparent(G,S) :- parent(G,P), parent(P,S).
+
+
+	
+	
+
 		
 
 		
