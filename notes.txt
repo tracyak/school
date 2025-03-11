@@ -176,13 +176,10 @@ DECLARE studentFile: STRING
 
 
 OPENFILE studentFile FOR APPEND
-
 OUTPUT "Enter studentID and studentName:"
 INPUT student1.studentID
 INPUT student1.studentName
-
 PUTRECORD studentFile, student1
-
 CLOSEFILE studentFile
 
 
