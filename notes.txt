@@ -158,7 +158,40 @@ Further Programming:
 	parent(dave,fred).
 	grandparent(G,S) :- parent(G,P), parent(P,S).
 
+Binary File access, 'Random' File mode
+- "StudentData.dat", this is a binary File
+- when accessing a random file, we open the file in "random" mode
+- Hash(KeyField) is a function that calculates and returns the Address to be accessed
+- SEEK(Address) is a function that find the address in the file
+- instead of READ, we use GETRECORD
+- instead of WRITE, we use PUTRECORD
 
+TYPE StudentRec
+	DECLARE studentID: INTEGER
+	DECLARE studentName: STRING
+ENDTYPE
+
+DECLARE student1: StudentRec
+DECLARE studentFile: STRING
+
+
+OPENFILE studentFile FOR APPEND
+
+OUTPUT "Enter studentID and studentName:"
+INPUT student1.studentID
+INPUT student1.studentName
+
+PUTRECORD studentFile, student1
+
+CLOSEFILE studentFile
+
+
+OPENFILE studentFile FOR READ
+WHILE NOT EOF(studentFile) DO
+	GETRECORD studentFile, student1
+	OUTPUT student1
+ENDWHILE
+CLOSEFILE studentFile
 	
 	
 
