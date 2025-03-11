@@ -174,7 +174,7 @@ ENDTYPE
 DECLARE student1: StudentRec
 DECLARE studentFile: STRING
 
-
+#serial access
 OPENFILE studentFile FOR APPEND
 OUTPUT "Enter studentID and studentName:"
 INPUT student1.studentID
