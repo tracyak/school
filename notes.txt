@@ -103,7 +103,7 @@ Further Programming:
 		- Sub classes inherit all properties of its Super class/es along with its own unique properties and methods.
 		- Polymorphism: Sub classes can also re-define methods that are inherited from its Super class.
 	- Containment/Aggregation
-		Building HAS A Room, but Room cannot exist without Building, Whole-Part relationship (Composition)
+		Building HAS A Room, but Room cannot exist without Building, Whole-Part relationship (Composition, not in syllabus)
 		Library HAS A Book, and either of them can exist without one another, Friendship (Containment/Aggregation)
 
 (4) declarative
@@ -166,29 +166,6 @@ Binary File access, 'Random' File mode
 - instead of READ, we use GETRECORD
 - instead of WRITE, we use PUTRECORD
 
-TYPE StudentRec
-	DECLARE studentID: INTEGER
-	DECLARE studentName: STRING
-ENDTYPE
-
-DECLARE student1: StudentRec
-DECLARE studentFile: STRING
-
-#serial access
-OPENFILE studentFile FOR APPEND
-OUTPUT "Enter studentID and studentName:"
-INPUT student1.studentID
-INPUT student1.studentName
-PUTRECORD studentFile, student1
-CLOSEFILE studentFile
-
-
-OPENFILE studentFile FOR READ
-WHILE NOT EOF(studentFile) DO
-	GETRECORD studentFile, student1
-	OUTPUT student1
-ENDWHILE
-CLOSEFILE studentFile
 	
 	
 

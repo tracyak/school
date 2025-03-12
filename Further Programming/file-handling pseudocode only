@@ -1,0 +1,104 @@
+TYPE StudentRec
+	DECLARE studentID: INTEGER
+	DECLARE studentName: STRING
+ENDTYPE
+
+DECLARE student1: StudentRec
+DECLARE studentFile: STRING
+
+// serial access
+OPENFILE studentFile FOR APPEND
+OUTPUT "Enter studentID and studentName:"
+INPUT student1.studentID
+INPUT student1.studentName
+PUTRECORD studentFile, student1
+CLOSEFILE studentFile
+
+
+OPENFILE studentFile FOR READ
+WHILE NOT EOF(studentFile) DO
+	GETRECORD studentFile, student1
+	OUTPUT student1
+ENDWHILE
+
+CLOSEFILE studentFile
+
+// sequential access
+DECLARE NewStudent: StudentRec
+DECLARE StudentFile: STRING
+DECLARE NewStudentFile: STRING
+DECLARE RecAdded: BOOLEAN
+
+studentFile <- "StudentFile.dat"
+newStudentFile <- "NewStudentFile.dat"
+RecAdded <- FALSE
+
+OPENFILE studentFile FOR READ
+OPENFILE newStudentFile FOR WRITE
+
+OUTPUT "Enter student ID"
+INPUT NewStudent.studentID
+OUTPUT "Enter student Name"
+INPUT NewStudent.studentName
+
+GETRECORD studentFile, tempStudent
+WHILE RecAdded = FALSE OR NOT EOF(studentFile)
+    IF tempStudent.studentID < NewStudent.studentID THEN
+        PUTRECORD newStudentFile, tempStudent
+    ELSE 
+        PUTRECORD newStudentFile, NewStudent
+        RecAdded <- TRUE
+    ENDIF
+ENDWHILE
+
+IF RecAdded = TRUE THEN
+    WHILE NOT EOF(studentFile) DO
+        GETRECORD newStudentFile, tempStudent
+        PUTRECORD newStudentFile, tempStudent
+    ENDWHILE
+ELSE
+    PUTRECORD newStudentFile, NewStudent
+ENDIF
+
+CLOSEFILE studentFile
+CLOSEFILE newStudentFile
+
+DEL studentFile
+RENAME newStudentFile, studentFile
+
+
+// random files
+DECLARE Student: StudentRec
+DEcCLARE studentFile: STRING
+DECLARE Address: INTEGER
+
+studentFile <- "StudentFile.dat"
+
+OPENFILE studentFile FOR random
+
+
+OUTPUT "Enter student ID"
+INPUT Student.studentID
+OUTPUT "Enter student Name"
+INPUT Student.studentName
+
+Address <- Hash(Student.studentID)
+SEEK studentFile, Address
+
+PUTRECORD studentFile, Address
+
+CLOSEFILE studentFile
+
+// exception handling
+
+TRY
+    OPENFILE studentFile FOR READ
+EXCEPT 
+    OUTPUT "Sorry, the file does not exist!"
+ENDTRY
+
+TRY 
+    Quot <- Num1 / Num2
+EXCEPT
+    OUTPUT "Division by zero is not possible!"
+ENDTRY

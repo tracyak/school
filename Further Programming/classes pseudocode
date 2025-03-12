@@ -1,0 +1,51 @@
+CLASS Person
+    PRIVATE Name: STRING
+    PRIVATE Age: INTEGER
+
+    PUBLIC PROCEDURE NEW(PName: STRING, PAge: INTEGER)
+        Name <- PName
+        Age <- PAge
+    ENDPROCEDURE
+
+    PUBLIC PROCEDURE SetName(PName: STRING)
+        Name <- PName
+    ENDPROCEDURE 
+
+    PUBLIC PROCEDURE SetAge(PAge: INTEGER)
+        Age <- PAge
+    ENDPROCEDURE 
+
+    PUBLIC FUNCTION GetName(PName: STRING)
+        return Name
+    ENDFUNCTION
+
+    PUBLIC FUNCTION GetAge(PAge: INTEGER)
+        return Age
+    ENDFUNCTION
+
+ENDCLASS
+
+person1 <- NEW Person("Tracy", 17)
+OUTPUT person1.GetName()
+OUTPUT person1.GetAge()
+person1.SetAge(18)
+
+CLASS Student INHERITS Person
+    PRIVATE Grade: CHAR
+
+    PUBLIC PROCEDURE NEW(PName: STRING, PAge: INTEGER, PGrade: CHAR)
+        SUPER.NEW(PName: STRING, PAge: INTEGER)
+        Grade <- PGrade
+    ENDPROCEDURE
+
+    PUBLIC PROCEDURE SetGrade(PGrade: CHAR)
+        Grade <- PGrade
+    ENDPROCEDURE 
+
+    PUBLIC FUNCTION GetGrade(PGrade: CHAR)
+        return Grade
+    ENDFUNCTION
+ENDCLASS
+
+student1 <- NEW Student("Tracy", 17, 'A')
+
