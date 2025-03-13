@@ -167,7 +167,10 @@ Binary File access, 'Random' File mode
 - instead of WRITE, we use PUTRECORD
 
 	
-	
+Dictionaries
+
+- a dictionary type is used as a form of loseless compression, where terms can be defined using key values.
+- 
 
 		
 
