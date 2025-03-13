@@ -25,9 +25,8 @@ PictureArray = [Picture("",0,0,"") for i in range(100)] #1D array of type Pictur
 def ReadData():
     try:
         file = open("/workspaces/school/google classroom/9618_w21_qp_41 files/Pictures.txt", 'r')
-        line = file.readline(0)
         i = 0
-        while line !=  " ":
+        while file.readline(0) !=  " ":
             Desc = file.readline()
             Width = int(file.readline())
             Height = int(file.readline())
