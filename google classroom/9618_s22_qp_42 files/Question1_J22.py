@@ -16,20 +16,22 @@ def Push(num):
         return False
     else:
         StackData.append(num)
-        if len(StackData) == 10:
+        StackPointer += 1
+        if StackPointer == 10:
             StackPointer = -1
-        else: 
-            StackPointer += 1
         return True
     
 #question 1(e)(i)
 def Pop():
+    global StackPointer
     if len(StackData) == 0:
         return -1
     else:
         temp = StackData[StackPointer]
         StackData[StackPointer] = None
-        StackPointer -= 1
+        StackPointer = StackPointer - 1
+        if StackPointer == -2:
+           StackPointer = 9
         return temp
 
     
@@ -42,8 +44,8 @@ for i in range(11):
         print("Stack is full, number was not successfully added to the stack.")
 OutputValues()
 
-Pop()
-Pop()
+print(Pop())
+print(Pop())
 OutputValues()
 
 
