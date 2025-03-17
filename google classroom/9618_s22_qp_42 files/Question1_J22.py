@@ -40,11 +40,11 @@ for i in range(11):
         print("Number was successfully added to the stack!")
     else:
         print("Stack is full, number was not successfully added to the stack.")
-print(StackData)
+OutputValues()
 
 Pop()
 Pop()
-print(StackData)
+OutputValues()
 
 
 
