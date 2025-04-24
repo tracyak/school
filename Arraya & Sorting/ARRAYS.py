@@ -18,3 +18,7 @@ my2DArray = [[12,6,2,27],[26,18,7,21],[12,31,46,50]]
 # print(my2DArray[0][1])
 
 # print(my2DArray[0][2])
+
+for row in range(len(myArr2D)):
+    for col in range(len(myArr2D[])):
+        print(myArr2D[row][col], end = " ")

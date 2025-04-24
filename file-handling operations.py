@@ -1,4 +1,4 @@
-file = open("Numbers.txt", 'r')
+file = open("Numberss.txt", 'r')
 print(file.read())
 print(file.readline())
 print(file.readlines())
@@ -22,6 +22,17 @@ print(numberArr)
 total = 0 
 for i in range(len(text)):
     total = total + int(text[i].rstrip())
+
+# split() command is used to separate records into multiple parts, splitlines() command is used to separate data into its multiple lines
+# split("\n") is an equivalent to splitlines()
+Arr = []
+try: 
+    file = open("Numberss.txt", 'r')
+    myString = file.read()
+    Arr = myString.split("\n")
+except FileNotFoundError:
+    print("Error, file not found!")
+print(Arr)
 
 #always remember to close the file at the end of its use
 file.close()
